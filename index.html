@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Атабек &amp; Мадина | Тойго чакыруу</title>
+  
+<!-- WHATSAPP ШИЛТЕМЕСИНИН СҮРӨТҮ -->
+<meta name="description" content="Атабек & Мадина - Үйлөнүү тойго чакыруу">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Атабек & Мадина - Чакыруу">
+<meta property="og:description" content="Сиздерди үйлөнүү тойубузга чакырабыз!">
+<meta property="og:url" content="https://bledi378-blip.github.io/madina-kyzuzatuu/">
+
+<!-- Сүрөттүн жаңы шилтемелери (Файлдын атын жаңы файлга жараша өзгөртүңүз) -->
+<meta property="og:image" content="https://bledi378-blip.github.io/madina-kyzuzatuu/new-invite.jpg">
+<meta property="og:image:secure_url" content="https://bledi378-blip.github.io/madina-kyzuzatuu/new-invite.jpg">
+<meta property="og:image:type" content="image/jpeg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Атабек & Мадина - Чакыруу">
+<meta name="twitter:description" content="Сиздерди үйлөнүү тойубузга чакырабыз!">
+<meta name="twitter:image" content="https://bledi378-blip.github.io/madina-kyzuzatuu/new-invite.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      overflow: hidden;
+      background: #f8eee2;
+    }
+
+    .cover {
+      position: relative;
+      isolation: isolate;
+      width: 100%;
+      height: 100vh;
+      height: 100svh;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #f8eee2;
+      color: #774610;
+    }
+
+    /* ВИДЕО ФОН */
+    .video-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* ЖУМШАК ШАМПАНЬ ТҮСТҮҮ КАБАТ */
+    .cover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 249, 241, 0.76),
+        rgba(255, 247, 237, 0.62),
+        rgba(255, 250, 243, 0.80)
+      );
+      pointer-events: none;
+    }
+
+    /* АЛТЫН РАМКА */
+    .frame {
+      position: absolute;
+      inset: 22px;
+      z-index: 2;
+      border: 1px solid rgba(183, 126, 52, 0.85);
+      pointer-events: none;
+    }
+
+    .frame::after {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba(190, 148, 87, 0.45);
+    }
+
+    /* НЕГИЗГИ ЖАЗУУЛАР */
+    .content {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      max-width: 760px;
+      max-height: 100%;
+      padding: 22px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* ЖҮЗҮКТӨР */
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 15px;
+      color: #a87329;
+    }
+
+    .logo::before,
+    .logo::after {
+      content: "";
+      width: clamp(35px, 9vw, 85px);
+      height: 1px;
+      background: #b88b4d;
+    }
+
+    .rings {
+      position: relative;
+      font-family: Georgia, serif;
+      font-size: 40px;
+      line-height: 1;
+    }
+
+    .rings::after {
+      content: "♥";
+      position: absolute;
+      top: -10px;
+      left: 43%;
+      font-size: 13px;
+      color: #b88940;
+    }
+
+    /* ЧАКЫРУУ */
+    .eyebrow {
+      margin-bottom: 24px;
+      color: #744510;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(16px, 2.7vw, 23px);
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    /* АТТАР */
+    .name {
+      max-width: 100%;
+      color: #86500d;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(48px, 10vw, 100px);
+      font-weight: 600;
+      line-height: 0.98;
+      letter-spacing: -1px;
+      white-space: nowrap;
+      text-shadow: 0 2px 1px rgba(255, 255, 255, 0.8);
+    }
+
+    /* ОРТОДОГУ БЕЛГИ */
+    .ampersand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      width: 100%;
+      margin: 0;
+      color: #a36a22;
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(56px, 9vw, 88px);
+      line-height: 1.05;
+    }
+
+    .ampersand::before,
+    .ampersand::after {
+      content: "";
+      width: 24%;
+      max-width: 150px;
+      height: 1px;
+      background: #a36a22;
+    }
+
+    /* ЖҮРӨКТҮҮ БӨЛГҮЧ */
+    .heart-divider {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      margin-top: 20px;
+      color: #b18036;
+      font-size: 22px;
+    }
+
+    .heart-divider::before,
+    .heart-divider::after {
+      content: "";
+      width: 70px;
+      height: 1px;
+      background: #b18036;
+    }
+
+    /* ДАТА */
+    .date {
+      margin-top: 16px;
+      color: #784713;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(27px, 5vw, 42px);
+      font-weight: 600;
+      letter-spacing: 5px;
+    }
+
+    .date-decoration {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 6px;
+      color: #ad7a39;
+      font-size: 21px;
+    }
+
+    .date-decoration::before,
+    .date-decoration::after {
+      content: "";
+      width: 48px;
+      height: 1px;
+      background: #ad7a39;
+    }
+
+    /* УЛАНТУУ БАСКЫЧЫ */
+    .continue-btn {
+      position: relative;
+      z-index: 5;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      min-width: 225px;
+      min-height: 56px;
+      padding: 12px 24px;
+      margin-top: 25px;
+      border: 1px solid #b17c35;
+      outline: 1px solid rgba(255, 255, 255, 0.95);
+      outline-offset: 4px;
+      border-radius: 50px;
+      background: rgba(255, 250, 243, 0.88);
+      color: #754817;
+      text-decoration: none;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s, transform 0.3s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .continue-btn:hover {
+      background: #a87532;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .continue-btn:focus-visible {
+      outline: 3px solid #86500d;
+      outline-offset: 6px;
+    }
+
+    .arrow {
+      font-family: Arial, sans-serif;
+      font-size: 23px;
+    }
+
+    /* ТҮШКӨН ЖҮРӨКЧӨЛӨР */
+    .heart {
+      position: absolute;
+      top: -45px;
+      z-index: 4;
+      color: #c91535;
+      text-shadow: 0 2px 5px rgba(140, 0, 25, 0.25);
+      pointer-events: none;
+      user-select: none;
+      animation: heartFall linear infinite;
+      will-change: transform, opacity;
+    }
+
+    @keyframes heartFall {
+      0% {
+        transform: translate3d(0, -45px, 0) rotate(-15deg) scale(0.8);
+        opacity: 0;
+      }
+
+      12% {
+        opacity: 0.9;
+      }
+
+      50% {
+        transform: translate3d(22px, 50vh, 0) rotate(20deg) scale(1);
+      }
+
+      85% {
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: translate3d(-15px, 110vh, 0) rotate(45deg) scale(0.9);
+        opacity: 0;
+      }
+    }
+
+    /* ТЕЛЕФОН */
+    @media (max-width: 480px) {
+      .frame {
+        inset: 12px;
+      }
+
+      .content {
+        padding: 15px 10px;
+      }
+
+      .logo {
+        margin-bottom: 13px;
+      }
+
+      .rings {
+        font-size: 34px;
+      }
+
+      .eyebrow {
+        margin-bottom: 22px;
+        font-size: 15px;
+        letter-spacing: 4px;
+      }
+
+      .name {
+        font-size: clamp(43px, 12vw, 59px);
+        letter-spacing: -1px;
+      }
+
+      .ampersand {
+        gap: 10px;
+        font-size: 62px;
+      }
+
+      .heart-divider {
+        margin-top: 16px;
+      }
+
+      .heart-divider::before,
+      .heart-divider::after {
+        width: 52px;
+      }
+
+      .date {
+        margin-top: 14px;
+        font-size: 27px;
+        letter-spacing: 4px;
+      }
+
+      .continue-btn {
+        min-width: 210px;
+        min-height: 52px;
+        margin-top: 23px;
+        padding: 10px 18px;
+        font-size: 16px;
+        letter-spacing: 3px;
+      }
+    }
+
+    /* КЫСКА ЭКРАНДАР */
+    @media (max-height: 700px) {
+      .content {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        transform: scale(0.86);
+      }
+
+      .logo {
+        margin-bottom: 9px;
+      }
+
+      .eyebrow {
+        margin-bottom: 14px;
+      }
+
+      .heart-divider {
+        margin-top: 10px;
+      }
+
+      .date {
+        margin-top: 9px;
+      }
+
+      .continue-btn {
+        margin-top: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .heart {
+        animation: none;
+        display: none;
+      }
+
+      .continue-btn {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="cover">
+
+    <!-- ВИДЕО ФОН -->
+    <video
+      class="video-bg"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      aria-hidden="true"
+    >
+      <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <!-- АЛТЫН РАМКА -->
+    <div class="frame" aria-hidden="true"></div>
+
+    <!-- ЧАКЫРУУНУН МАЗМУНУ -->
+    <section class="content">
+
+      <div class="logo" aria-hidden="true">
+        <div class="rings">♡♡</div>
+      </div>
+
+      <p class="eyebrow">Тойго чакыруу</p>
+
+      <div class="name">АТАБЕК</div>
+
+      <div class="ampersand">&amp;</div>
+
+      <div class="name">МАДИНА</div>
+
+      <div class="heart-divider" aria-hidden="true">♥</div>
+
+      <p class="date">25.10.2026</p>
+
+      <div class="date-decoration" aria-hidden="true">✾</div>
+
+      <!-- TILDA'ДАГЫ ЭКИНЧИ БЕТКЕ ӨТҮҮ -->
+      <a
+        class="continue-btn"
+        href="https://dream-juicy-moorhen.tilda.ws/"
+      >
+        УЛАНТУУ <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+    </section>
+
+  </main>
+
+  <script>
+    // ФОНГО ТҮШҮҮЧҮ ЖҮРӨКЧӨЛӨР
+    const cover = document.querySelector(".cover");
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      for (let i = 0; i < 28; i++) {
+        const heart = document.createElement("span");
+
+        heart.className = "heart";
+        heart.textContent = Math.random() > 0.5 ? "♥" : "❤";
+
+        heart.style.left = Math.random() * 100 + "%";
+        heart.style.fontSize = (12 + Math.random() * 17) + "px";
+        heart.style.animationDuration = (7 + Math.random() * 9) + "s";
+        heart.style.animationDelay = (-Math.random() * 15) + "s";
+
+        if (Math.random() > 0.65) {
+          heart.style.color = "#e58b9b";
+        }
+
+        cover.appendChild(heart);
+      }
+    }
+  </script>
+
+</body>
+</html>
+
